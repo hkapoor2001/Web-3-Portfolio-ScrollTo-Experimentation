@@ -1,0 +1,15 @@
+#masthead {
+    position: fixed;
+    z-index: 9999;
+    left:0;
+    top: 0;
+    background: #fff;
+    width: 100px;
+    height: 100vh;
+    color: #000;
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
