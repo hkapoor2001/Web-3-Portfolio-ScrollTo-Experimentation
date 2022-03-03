@@ -1,16 +1,3 @@
-/* =============
-    Mixins
-============= */
-/* ---------------- Font Sizing ---------------- */
-html {
-  font-size: 100%;
-}
-
-/* ---------------- Media Queries ---------------- */
-body {
-  padding-left: 100px !important;
-}
-
 #masthead {
   position: fixed;
   z-index: 9999;
@@ -61,14 +48,14 @@ body {
 }
 
 #hscroll {
-  width: calc(500vw - 100px);
+  width: 500vw;
   height: 100vh;
   display: flex;
   flex-direction: row;
 }
 
 .stage {
-  width: calc(100vw - 100px);
+  width: 100vw;
   height: 100%;
   display: flex;
   justify-content: center;
