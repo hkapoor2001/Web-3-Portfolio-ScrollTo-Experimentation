@@ -86,14 +86,14 @@ body {
   }
   
   /*== For DEMO Styling Only==*/
-  body, header, main, footer, div, section { box-sizing: border-box;}
+  body, nav, main, footer, div, section { box-sizing: border-box;}
   body{
     font-family: sans-serif;
     padding: 0;
     margin: 0;
   }
   a { color: #fff;}
-  section { text-align: center; color: #fff; font-size: 2em; }
+  .panel { text-align: center; color: #fff; font-size: 2em; }
   #stage-1 {
     background: #dd3e54;
     background: linear-gradient(to right, #6be585, #dd3e54);

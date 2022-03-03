@@ -104,7 +104,7 @@
 }
 
 /*== For DEMO Styling Only==*/
-body, header, main, footer, div, section {
+body, nav, main, footer, div, section {
   box-sizing: border-box;
 }
 
@@ -118,7 +118,7 @@ a {
   color: #fff;
 }
 
-section {
+.panel {
   text-align: center;
   color: #fff;
   font-size: 2em;
