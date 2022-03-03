@@ -1,0 +1,7 @@
+<svg width="59" height="59" viewBox="0 0 59 59" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="contact button">
+<circle id="circle" cx="29.5" cy="29.5" r="29.5" fill="#0047FF"/>
+<rect id="envelope" x="11.5" y="16.5" width="36" height="26" stroke="white"/>
+<path id="flap" d="M11.5 16.5L29.5 28.5L47 16.5" stroke="white"/>
+</g>
+</svg>
