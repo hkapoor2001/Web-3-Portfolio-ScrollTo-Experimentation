@@ -1,0 +1,46 @@
+#header-section{
+    width: 100vw;
+    position: fixed;
+    z-index: 3;
+    display: grid;
+    grid-template-areas: ". header .";
+    grid-template-columns: 3% 94% 3%;
+    margin-top: 2%;
+
+    #header-container{
+        width: 100%;
+        grid-area: header;
+        display: grid;
+        grid-template-areas: "logo . buttons";
+        grid-template-columns: 50% 42% 8%;
+
+        #logo-container{
+            grid-area: logo;
+            align-items: center;
+            display: flex;
+            justify-content: flex-start;
+            #logo{
+                font-family: 'Bebas Neue', cursive;
+                font-size: 35px;
+
+                #logo-period{
+                    color: #0029FF;
+                }
+
+            }
+
+            #logo:hover{
+                color: #0029FF;
+            }
+        }
+
+        #button-container{
+            grid-area: buttons;
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+
+        }
+    }
+
+}

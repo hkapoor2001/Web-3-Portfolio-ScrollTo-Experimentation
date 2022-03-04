@@ -1,31 +1,4 @@
-body {
-    // padding-left: 100px!important;
-  }
-  .logo {
-    display: block;
-    color: #000;
-    font-size: 36px;
-    font-weight: 700;
-    text-decoration: none;
-    text-transform: uppercase;
-    transform: rotate(90deg);
-    transform-origin: left center;
-    margin: 0 0 0 100px;
-  }
-  #navmenu {
-    list-style: none;
-    color: #000;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-  }
-  #navmenu > li {
-    padding: 0 0 10px;
-  }
-  #navmenu a {
-    color: #000;
-    text-decoration: none;
-  }
+
   #content {
     overflow-x: hidden;
   }
@@ -131,12 +104,5 @@ body {
       width: 100%;
       height: auto;
       padding: 10px 20px;
-    }
-    .logo {
-      width: 106px;
-      margin: 0 auto;
-      transform: rotate(0deg);
-      left: 0;
-      top: 0;
     }
   }
