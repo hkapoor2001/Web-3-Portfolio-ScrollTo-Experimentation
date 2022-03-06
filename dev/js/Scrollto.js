@@ -2,12 +2,13 @@ import { menuTL } from "./menuAnimation";
 import { gsap } from "gsap/all";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 
+
 gsap.registerPlugin(ScrollToPlugin);
 
 export function scrolltoProjects(){ 
 
-    let scrollContainer = document.querySelector("#hscroll");
-    const wideViewport = window.matchMedia("(min-width: 992px)");
+let scrollContainer = document.querySelector("#hscroll");
+const wideViewport = window.matchMedia("(min-width: 1024px)");
 
 document.querySelectorAll("#navmenu a").forEach(element => {
   
@@ -17,7 +18,8 @@ document.querySelectorAll("#navmenu a").forEach(element => {
     const id = this.getAttribute('href').split('#')[1];
     
     const targetElement = document.getElementById(id)
-    const navBar = document.getElementById('masthead')
+    // const navBar = document.getElementById('masthead')
+
 
     if(wideViewport.matches) {
       gsap.to(window, {
@@ -25,6 +27,7 @@ document.querySelectorAll("#navmenu a").forEach(element => {
         duration: .5
       })
       menuTL.reverse();
+    //   CanISeeMenu = false;
     } else {
       gsap.to(window, {
         scrollTo: targetElement,

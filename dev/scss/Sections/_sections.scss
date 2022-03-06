@@ -4,14 +4,14 @@
   }
   #hscroll {
     // width: calc(500vw - 100px);
-    width: 500vw;
+    width: 850vw;
     height: 100vh;
     display: flex;
     flex-direction: row;
   }
   .stage {
     // width: calc(100vw - 100px);
-    width: 100vw;
+    width: 200vw;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -74,6 +74,7 @@
   #stage-2 {
     background: #090979;
     background: linear-gradient(to right, #090979, #00d4ff);
+    width: 50vw;
   }
   #stage-3 {
     background: #833ab4;
@@ -88,21 +89,21 @@
     background: linear-gradient(to right, #8A2387, #E94057, #F27121);
   }
   
-  @media only screen and (max-width: 991px) {
-    body { padding-left: 0!important;}
-    #hscroll {
-      width: 100vw;
-      height: auto;
-      flex-direction: column;
-    }
-    .stage {
-      width: 100vw;
-      height: auto;
-      min-height: 100vh;
-    }
-    #masthead {
-      width: 100%;
-      height: auto;
-      padding: 10px 20px;
-    }
-  }
+  // @media only screen and (max-width: 991px) {
+  //   body { padding-left: 0!important;}
+  //   #hscroll {
+  //     width: 100vw;
+  //     height: auto;
+  //     flex-direction: column;
+  //   }
+  //   .stage {
+  //     width: 100vw;
+  //     height: auto;
+  //     min-height: 100vh;
+  //   }
+  //   #masthead {
+  //     width: 100%;
+  //     height: auto;
+  //     padding: 10px 20px;
+  //   }
+  // }

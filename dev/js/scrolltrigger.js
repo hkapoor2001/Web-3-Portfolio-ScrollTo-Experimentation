@@ -7,7 +7,6 @@ export function HorizontalScroll(){
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
-
 // let sections = gsap.utils.toArray(".stage");
 let scrollContainer = document.querySelector("#hscroll");
 
