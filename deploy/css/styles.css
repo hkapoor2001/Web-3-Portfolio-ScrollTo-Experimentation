@@ -123,109 +123,142 @@ ul {
   padding-inline-start: 0px;
 }
 
-#content {
-  overflow-x: hidden;
-}
-
-#hscroll {
-  width: 850vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: row;
-}
-
-.stage {
-  width: 200vw;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  z-index: 0;
-  padding: 20px;
-}
-
-.proxy {
-  visibility: hidden;
-  opacity: 0;
-}
-
-#btnright {
-  position: absolute;
-  z-index: 9999;
-  right: 30px;
-  bottom: 15px;
-  background: #fcc;
-  border: none;
-  color: #000;
-  font-size: 16px;
-  line-height: 1;
-  padding: 10px;
-  cursor: pointer;
-  border-radius: 100%;
-  width: 70px;
-  height: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#btncontact {
-  position: fixed;
-  z-index: 9999;
-  right: 0;
-  bottom: 30px;
-  background: #000;
-  border: none;
-  color: #fff;
-  font-size: 24px;
-  padding: 10px 15px;
-  cursor: pointer;
-}
-
-/*== For DEMO Styling Only==*/
-body, nav, main, footer, div, section {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: sans-serif;
-  padding: 0;
-  margin: 0;
-}
-
-a {
-  color: #fff;
-}
-
-.panel {
-  text-align: center;
-  color: #fff;
-  font-size: 2em;
-}
-
-#stage-1 {
+#hscroll #stage-1 {
   background: #dd3e54;
   background: linear-gradient(to right, #6be585, #dd3e54);
+  height: 100vh;
 }
-
-#stage-2 {
+#hscroll #stage-2 {
   background: #090979;
   background: linear-gradient(to right, #090979, #00d4ff);
-  width: 50vw;
+  height: 100vh;
 }
-
-#stage-3 {
+#hscroll #stage-3 {
   background: #833ab4;
   background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+  height: 100vh;
 }
-
-#stage-4 {
+#hscroll #stage-4 {
   background: #009FFF;
   background: linear-gradient(to right, #009FFF, #ec2F4B);
+  height: 100vh;
 }
-
-#stage-5 {
+#hscroll #stage-5 {
   background: #8A2387;
   background: linear-gradient(to right, #8A2387, #E94057, #F27121);
+  height: 100vh;
+}
+
+@media (min-width: 1200px) {
+  #content {
+    overflow-x: hidden;
+  }
+
+  #hscroll {
+    width: 850vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .stage {
+    width: 200vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 0;
+    padding: 20px;
+  }
+
+  .proxy {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  #btnright {
+    position: absolute;
+    z-index: 9999;
+    right: 30px;
+    bottom: 15px;
+    background: #fcc;
+    border: none;
+    color: #000;
+    font-size: 16px;
+    line-height: 1;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 100%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #btncontact {
+    position: fixed;
+    z-index: 9999;
+    right: 0;
+    bottom: 30px;
+    background: #000;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+
+  /*== For DEMO Styling Only==*/
+  body, nav, main, footer, div, section {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+  }
+
+  a {
+    color: #fff;
+  }
+
+  .panel {
+    text-align: center;
+    color: #fff;
+    font-size: 2em;
+  }
+
+  #stage-1 {
+    background: #dd3e54;
+    background: linear-gradient(to right, #6be585, #dd3e54);
+    height: 100vh;
+  }
+
+  #stage-2 {
+    background: #090979;
+    background: linear-gradient(to right, #090979, #00d4ff);
+    width: 50vw;
+    height: 100vh;
+  }
+
+  #stage-3 {
+    background: #833ab4;
+    background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+    height: 100vh;
+  }
+
+  #stage-4 {
+    background: #009FFF;
+    background: linear-gradient(to right, #009FFF, #ec2F4B);
+    height: 100vh;
+  }
+
+  #stage-5 {
+    background: #8A2387;
+    background: linear-gradient(to right, #8A2387, #E94057, #F27121);
+    height: 100vh;
+  }
 }

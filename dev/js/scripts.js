@@ -53,6 +53,7 @@ document.querySelectorAll("#navmenu a").forEach(element => {
       gsap.to(window, {
         // scrollTo: ( (targetElement.offsetLeft) * ( scrollContainer.offsetWidth / (scrollContainer.offsetWidth - targetElement.offsetWidth)) ),
         scrollTo: ( (targetElement.offsetLeft) * ( scrollContainer.offsetWidth / (scrollContainer.offsetWidth - ((window.innerWidth))))),
+        // added windowinnerwidth so that screenscrolls to beginning of the section
         duration: .5
       })
       menuTL.reverse();
@@ -75,4 +76,3 @@ document.querySelectorAll("#navmenu a").forEach(element => {
 
 window.addEventListener("resize", displayWindowSize )
 window.addEventListener("load", displayWindowSize )
-
