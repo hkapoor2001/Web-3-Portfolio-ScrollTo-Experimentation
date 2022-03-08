@@ -17,7 +17,7 @@ export function HorizontalScroll(){
         ease: "none",
         scrollTrigger: {
           trigger: scrollContainer,
-          // invalidateOnRefresh: true,
+          invalidateOnRefresh: true,
           pin: true,
           scrub: 1,
           end: () => "+=" + scrollContainer.offsetWidth

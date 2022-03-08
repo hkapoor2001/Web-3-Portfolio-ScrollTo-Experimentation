@@ -80,10 +80,10 @@ const wideViewport = window.matchMedia("(min-width: 1024px)");
   
 // });
 
-var appelWidth;
 
-window.addEventListener("resize", function(){appelWidth = appel.offsetLeft;})
-window.addEventListener("load", function(){appelWidth = appel.offsetLeft;})
+
+// window.addEventListener("resize", function(){appelWidth = appel.offsetLeft;})
+// window.addEventListener("load", function(){appelWidth = appel.offsetLeft;})
 
 var appellink= document.querySelector("#appellink")
 
@@ -92,31 +92,41 @@ var appel= document.querySelector("#stage-2")
 appellink.addEventListener('click', function() {
 
   if(wideViewport.matches) {
+
+    console.log("-------------------------------------");
+    console.log(appel.offsetLeft + "this is appel.offsetLeft"), 
+    console.log(appelWidth + "this is appelwidth");
+    console.log(scrollContainer.offsetWidth + "this is scrollContainer.offsetWidth"), 
+    console.log(ScrollContainerWidth + "this is ScrollContainerWidth");
+    console.log(windowWidth + "this is the window width"), 
+    console.log(window.innerWidth + "this is the window inner width");
+    console.log("-------------------------------------");
+
     gsap.to(window, {
-      scrollTo: ( (appelWidth) * ( ScrollContainerWidth / (ScrollContainerWidth - ((windowWidth))))),
-      duration: .5
+      scrollTo: ( (appelWidth) * ( ScrollContainerWidth / (ScrollContainerWidth - windowWidth))),
+      duration: .5,
+      invalidateOnRefresh: true
     })
     menuTL.reverse();
     CanISeeMenu = false;
   } else {
     gsap.to(window, {
       scrollTo: appelWidth,
-      duration: .5
+      duration: .5,
+      invalidateOnRefresh: true
     })
     menuTL.reverse();
     CanISeeMenu = false
   }
-  
 });
 
 
 
 var netlink= document.querySelector("#netlink")
 
-var netWidth;
 
-window.addEventListener("resize", function(){netWidth = net.offsetLeft;})
-window.addEventListener("load", function(){netWidth = net.offsetLeft;})
+// window.addEventListener("resize", function(){netWidth = net.offsetLeft;})
+// window.addEventListener("load", function(){netWidth = net.offsetLeft;})
 
 var net= document.querySelector("#stage-1")
 
@@ -126,6 +136,7 @@ netlink.addEventListener('click', function() {
   if(wideViewport.matches) {
     gsap.to(window, {
       scrollTo: ( (netWidth) * ( ScrollContainerWidth / (ScrollContainerWidth - ((windowWidth))))),
+      invalidateOnRefresh: true,
       duration: .5
     })
     menuTL.reverse();
@@ -133,6 +144,7 @@ netlink.addEventListener('click', function() {
   } else {
     gsap.to(window, {
       scrollTo: netWidth,
+      invalidateOnRefresh: true,
       duration: .5
     })
     menuTL.reverse();
@@ -144,22 +156,72 @@ netlink.addEventListener('click', function() {
 
 var windowWidth;
 
-window.addEventListener("resize", function(){windowWidth = window.innerWidth;})
-window.addEventListener("load", function(){windowWidth = window.innerWidth;})
+var appelWidth;
+
+var netWidth;
+
+
+window.addEventListener("load", 
+function(){
+  netWidth = net.offsetLeft;
+  console.log(net.offsetLeft + "this is net.offsetLeft"), 
+  console.log(netWidth + "this is netwidth");
+  // ---------------------
+  appelWidth = appel.offsetLeft;
+  console.log(appel.offsetLeft + "this is appel.offsetLeft"), 
+  console.log(appelWidth + "this is appelwidth");
+  // ---------------------
+  ScrollContainerWidth = scrollContainer.offsetWidth;
+  console.log(scrollContainer.offsetWidth + "this is scrollContainer.offsetWidth"), 
+  console.log(ScrollContainerWidth + "this is ScrollContainerWidth");
+  // ---------------------
+  windowWidth = window.innerWidth;
+  console.log(windowWidth + "this is the window width"), 
+  console.log(window.innerWidth + "this is the window inner width");
+  // ---------------------
+  displayWindowSize();
+  displayWindowSizeMobile();
+})
+
+
+window.addEventListener("resize", 
+function(){
+  // ---------------------
+  netWidth = net.offsetLeft;
+  console.log(net.offsetLeft + "this is net.offsetLeft"), 
+  console.log(netWidth + "this is netwidth");
+  // ---------------------
+  appelWidth = appel.offsetLeft;
+  console.log(appel.offsetLeft + "this is appel.offsetLeft"), 
+  console.log(appelWidth + "this is appelwidth");
+  // ---------------------
+  ScrollContainerWidth = scrollContainer.offsetWidth;
+  console.log(scrollContainer.offsetWidth + "this is scrollContainer.offsetWidth"), 
+  console.log(ScrollContainerWidth + "this is ScrollContainerWidth");
+  // ---------------------
+  windowWidth = window.innerWidth;
+  console.log(windowWidth + "this is the window width"), 
+  console.log(window.innerWidth + "this is the window inner width");
+  // ---------------------
+  displayWindowSize();
+  displayWindowSizeMobile();
+  // ---------------------
+})
+
+
 
 var ScrollContainerWidth;
 
-window.addEventListener("resize", function(){ScrollContainerWidth = scrollContainer.offsetWidth;})
-window.addEventListener("load", function(){ScrollContainerWidth = scrollContainer.offsetWidth;})
+// window.addEventListener("resize", function(){ScrollContainerWidth = scrollContainer.offsetWidth;})
+// window.addEventListener("load", function(){ScrollContainerWidth = scrollContainer.offsetWidth;})
 
 
+// window.addEventListener("resize", displayWindowSize )
+// window.addEventListener("load", displayWindowSize )
 
-window.addEventListener("resize", displayWindowSize )
-window.addEventListener("load", displayWindowSize )
 
-
-window.addEventListener("resize", displayWindowSizeMobile )
-window.addEventListener("load", displayWindowSizeMobile )
+// window.addEventListener("resize", displayWindowSizeMobile )
+// window.addEventListener("load", displayWindowSizeMobile )
 
 
 
