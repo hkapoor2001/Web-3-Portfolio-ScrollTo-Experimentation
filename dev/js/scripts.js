@@ -53,18 +53,18 @@ document.querySelectorAll("#navmenu a").forEach(element => {
 
 
     if(wideViewport.matches) {
-      // gsap.to(window, {
-      //   // scrollTo: ( (targetElement.offsetLeft) * ( scrollContainer.offsetWidth / (scrollContainer.offsetWidth - targetElement.offsetWidth)) ),
-      //   scrollTo: ( (targetElement.offsetLeft) * ( scrollContainer.offsetWidth / (scrollContainer.offsetWidth - ((window.innerWidth))))),
-      //   // added windowinnerwidth so that screenscrolls to beginning of the section
-      //   duration: .5
-      // })
       gsap.to(window, {
         // scrollTo: ( (targetElement.offsetLeft) * ( scrollContainer.offsetWidth / (scrollContainer.offsetWidth - targetElement.offsetWidth)) ),
-        scrollTo: ( (targetElementwidth) * ( ScrollContainerWidth / (ScrollContainerWidth - ((windowWidth))))),
+        scrollTo: ( (targetElement.offsetLeft) * ( scrollContainer.offsetWidth / (scrollContainer.offsetWidth - ((window.innerWidth))))),
         // added windowinnerwidth so that screenscrolls to beginning of the section
         duration: .5
       })
+      // gsap.to(window, {
+      //   // scrollTo: ( (targetElement.offsetLeft) * ( scrollContainer.offsetWidth / (scrollContainer.offsetWidth - targetElement.offsetWidth)) ),
+      //   scrollTo: ( (targetElementwidth) * ( ScrollContainerWidth / (ScrollContainerWidth - ((windowWidth))))),
+      //   // added windowinnerwidth so that screenscrolls to beginning of the section
+      //   duration: .5
+      // })
       menuTL.reverse();
       CanISeeMenu = false;
     } else {
@@ -84,18 +84,18 @@ document.querySelectorAll("#navmenu a").forEach(element => {
 
 
 
-window.addEventListener("resize", function(){targetElementwidth = targetElement.offsetLeft;})
-window.addEventListener("load", function(){targetElementwidth = targetElement.offsetLeft;})
+// window.addEventListener("resize", function(){targetElementwidth = targetElement.offsetLeft;})
+// window.addEventListener("load", function(){targetElementwidth = targetElement.offsetLeft;})
 
-var windowWidth;
+// var windowWidth;
 
-window.addEventListener("resize", function(){windowWidth = window.innerWidth;})
-window.addEventListener("load", function(){windowWidth = window.innerWidth;})
+// window.addEventListener("resize", function(){windowWidth = window.innerWidth;})
+// window.addEventListener("load", function(){windowWidth = window.innerWidth;})
 
-var ScrollContainerWidth;
+// var ScrollContainerWidth;
 
-window.addEventListener("resize", function(){ScrollContainerWidth = scrollContainer.offsetWidth;})
-window.addEventListener("load", function(){ScrollContainerWidth = scrollContainer.offsetWidth;})
+// window.addEventListener("resize", function(){ScrollContainerWidth = scrollContainer.offsetWidth;})
+// window.addEventListener("load", function(){ScrollContainerWidth = scrollContainer.offsetWidth;})
 
 
 
