@@ -41,51 +41,106 @@ gsap.registerPlugin(ScrollToPlugin);
 let scrollContainer = document.querySelector("#hscroll");
 const wideViewport = window.matchMedia("(min-width: 1024px)");
 
-document.querySelectorAll("#navmenu a").forEach(element => {
+// document.querySelectorAll("#navmenu a").forEach(element => {
   
-  element.addEventListener('click', function(e) {
+//   element.addEventListener('click', function(e) {
     
-    e.preventDefault();
-    const id = this.getAttribute('href').split('#')[1];
+//     e.preventDefault();
+//     const id = this.getAttribute('href').split('#')[1];
     
-    const targetElement = document.getElementById(id)
-    // const navBar = document.getElementById('masthead')
+//     const targetElement = document.getElementById(id)
+//     // const navBar = document.getElementById('masthead')
 
 
-    if(wideViewport.matches) {
-      // gsap.to(window, {
-      //   // scrollTo: ( (targetElement.offsetLeft) * ( scrollContainer.offsetWidth / (scrollContainer.offsetWidth - targetElement.offsetWidth)) ),
-      //   scrollTo: ( (targetElement.offsetLeft) * ( scrollContainer.offsetWidth / (scrollContainer.offsetWidth - ((window.innerWidth))))),
-      //   // added windowinnerwidth so that screenscrolls to beginning of the section
-      //   duration: .5
-      // })
-      gsap.to(window, {
-        // scrollTo: ( (targetElement.offsetLeft) * ( scrollContainer.offsetWidth / (scrollContainer.offsetWidth - targetElement.offsetWidth)) ),
-        scrollTo: ( (targetElementwidth) * ( ScrollContainerWidth / (ScrollContainerWidth - ((windowWidth))))),
-        // added windowinnerwidth so that screenscrolls to beginning of the section
-        duration: .5
-      })
-      menuTL.reverse();
-      CanISeeMenu = false;
-    } else {
-      gsap.to(window, {
-        scrollTo: targetElement,
-        duration: .5
-      })
-      menuTL.reverse();
-      CanISeeMenu = false
-    }
+//     if(wideViewport.matches) {
+//       // gsap.to(window, {
+//       //   // scrollTo: ( (targetElement.offsetLeft) * ( scrollContainer.offsetWidth / (scrollContainer.offsetWidth - targetElement.offsetWidth)) ),
+//       //   scrollTo: ( (targetElement.offsetLeft) * ( scrollContainer.offsetWidth / (scrollContainer.offsetWidth - ((window.innerWidth))))),
+//       //   // added windowinnerwidth so that screenscrolls to beginning of the section
+//       //   duration: .5
+//       // })
+//       gsap.to(window, {
+//         // scrollTo: ( (targetElement.offsetLeft) * ( scrollContainer.offsetWidth / (scrollContainer.offsetWidth - targetElement.offsetWidth)) ),
+//         scrollTo: ( (targetElementwidth) * ( ScrollContainerWidth / (ScrollContainerWidth - ((windowWidth))))),
+//         // added windowinnerwidth so that screenscrolls to beginning of the section
+//         duration: .5
+//       })
+//       menuTL.reverse();
+//       CanISeeMenu = false;
+//     } else {
+//       gsap.to(window, {
+//         scrollTo: targetElement,
+//         duration: .5
+//       })
+//       menuTL.reverse();
+//       CanISeeMenu = false
+//     }
     
-  });
+//   });
+  
+// });
+
+var appelWidth;
+
+window.addEventListener("resize", function(){appelWidth = appel.offsetLeft;})
+window.addEventListener("load", function(){appelWidth = appel.offsetLeft;})
+
+var appellink= document.querySelector("#appellink")
+
+var appel= document.querySelector("#stage-2")
+
+appellink.addEventListener('click', function() {
+
+  if(wideViewport.matches) {
+    gsap.to(window, {
+      scrollTo: ( (appelWidth) * ( ScrollContainerWidth / (ScrollContainerWidth - ((windowWidth))))),
+      duration: .5
+    })
+    menuTL.reverse();
+    CanISeeMenu = false;
+  } else {
+    gsap.to(window, {
+      scrollTo: appelWidth,
+      duration: .5
+    })
+    menuTL.reverse();
+    CanISeeMenu = false
+  }
   
 });
 
 
 
+var netlink= document.querySelector("#netlink")
+
+var netWidth;
+
+window.addEventListener("resize", function(){netWidth = net.offsetLeft;})
+window.addEventListener("load", function(){netWidth = net.offsetLeft;})
+
+var net= document.querySelector("#stage-1")
+
+netlink.addEventListener('click', function() {
 
 
-window.addEventListener("resize", function(){targetElementwidth = targetElement.offsetLeft;})
-window.addEventListener("load", function(){targetElementwidth = targetElement.offsetLeft;})
+  if(wideViewport.matches) {
+    gsap.to(window, {
+      scrollTo: ( (netWidth) * ( ScrollContainerWidth / (ScrollContainerWidth - ((windowWidth))))),
+      duration: .5
+    })
+    menuTL.reverse();
+    CanISeeMenu = false;
+  } else {
+    gsap.to(window, {
+      scrollTo: netWidth,
+      duration: .5
+    })
+    menuTL.reverse();
+    CanISeeMenu = false
+  }
+  
+});
+
 
 var windowWidth;
 
@@ -124,6 +179,7 @@ function OpenCloseMobileMenu(){
         mobileTL.reverse();
         CanISeeMobileMenu = false;}
 }
+
 
 
 
