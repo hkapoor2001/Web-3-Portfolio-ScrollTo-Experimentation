@@ -134,6 +134,14 @@
       "oAP" : "\/dev\/global\/header.html",
       "oF" : 0
     },
+    "\/dev\/global\/mobilenav.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/dev\/global\/mobilenav.html",
+      "oF" : 0
+    },
     "\/dev\/global\/nav.kit" : {
       "cB" : 0,
       "ft" : 2048,
@@ -158,6 +166,17 @@
       "oAP" : "\/deploy\/index.html",
       "oF" : 2
     },
+    "\/dev\/js\/burgerAnimation.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/dev\/js\/burgerAnimation-min.js",
+      "oF" : 1,
+      "sC" : 3,
+      "tS" : 0
+    },
     "\/dev\/js\/buttonAnimation.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -176,6 +195,17 @@
       "mi" : 1,
       "oA" : 1,
       "oAP" : "\/dev\/js\/menuAnimation-min.js",
+      "oF" : 1,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/dev\/js\/mobilemenuAnimation.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/dev\/js\/mobilemenuAnimation-min.js",
       "oF" : 1,
       "sC" : 3,
       "tS" : 0
@@ -279,6 +309,21 @@
       "ma" : 0,
       "oA" : 1,
       "oAP" : "\/dev\/scss\/layout\/_header.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/dev\/scss\/layout\/_mobilenav.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/dev\/scss\/layout\/_mobilenav.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,

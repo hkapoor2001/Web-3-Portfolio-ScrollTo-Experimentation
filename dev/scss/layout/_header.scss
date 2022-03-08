@@ -1,24 +1,32 @@
 #header-section{
     width: 100vw;
     position: fixed;
-    z-index: 3;
     display: grid;
     grid-template-areas: ". header .";
     grid-template-columns: 3% 94% 3%;
-    margin-top: 2%;
+    padding-top: 2%;
+    z-index: 100;
 
     #header-container{
-        width: 100%;
         grid-area: header;
+        width: 100%;
         display: grid;
-        grid-template-areas: "logo . buttons";
-        grid-template-columns: 50% 42% 8%;
+        grid-template-areas: 
+        "mobilelogo burger"
+        "mobilenav mobilenav";
+        grid-template-columns: 50% 50%;
+
+        #button-container{
+            display: none;
+        }
 
         #logo-container{
-            grid-area: logo;
-            align-items: center;
+            grid-area: mobilelogo;
             display: flex;
             justify-content: flex-start;
+            align-items: center;
+            position: relative;
+            z-index: 2;
             #logo{
                 font-family: 'Bebas Neue', cursive;
                 font-size: 35px;
@@ -28,18 +36,57 @@
                 }
 
             }
-
-            #logo:hover{
-                color: #0029FF;
-            }
         }
 
-        #button-container{
-            grid-area: buttons;
-            align-items: center;
+        #burger-container{
+            grid-area: burger;
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-end;
+            position: relative;
+            #burger{
+                position:absolute;
+                z-index: 100;
+            }
+        }
+    }
 
+    @include xl{
+        background-color: transparent;
+        #header-container{
+            grid-template-areas: "logo . buttons";
+            grid-template-columns: 50% 42% 8%;
+
+            #burger-container{
+                display: none;
+            }
+    
+            #logo-container{
+                grid-area: logo;
+                align-items: center;
+                display: flex;
+                justify-content: flex-start;
+                #logo{
+                    font-family: 'Bebas Neue', cursive;
+                    font-size: 35px;
+    
+                    #logo-period{
+                        color: #0029FF;
+                    }
+    
+                }
+    
+                #logo:hover{
+                    color: #0029FF;
+                }
+            }
+    
+            #button-container{
+                grid-area: buttons;
+                align-items: center;
+                display: flex;
+                justify-content: space-between;
+    
+            }
         }
     }
 

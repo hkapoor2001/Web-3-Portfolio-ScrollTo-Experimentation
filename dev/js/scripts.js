@@ -2,6 +2,9 @@ import { HorizontalScroll } from "./scrolltrigger";
 import { menuButtons } from "./menuAnimation.js";
 // import{ scrolltoProjects } from "./Scrollto"
 import { displayWindowSize } from "./windowSize.js";
+import { displayWindowSizeMobile } from "./windowSize.js";
+import { burgerTL } from "./burgerAnimation.js";
+import { mobileTL } from "./mobilemenuAnimation.js";
 
 HorizontalScroll();
 menuButtons();
@@ -50,9 +53,15 @@ document.querySelectorAll("#navmenu a").forEach(element => {
 
 
     if(wideViewport.matches) {
+      // gsap.to(window, {
+      //   // scrollTo: ( (targetElement.offsetLeft) * ( scrollContainer.offsetWidth / (scrollContainer.offsetWidth - targetElement.offsetWidth)) ),
+      //   scrollTo: ( (targetElement.offsetLeft) * ( scrollContainer.offsetWidth / (scrollContainer.offsetWidth - ((window.innerWidth))))),
+      //   // added windowinnerwidth so that screenscrolls to beginning of the section
+      //   duration: .5
+      // })
       gsap.to(window, {
         // scrollTo: ( (targetElement.offsetLeft) * ( scrollContainer.offsetWidth / (scrollContainer.offsetWidth - targetElement.offsetWidth)) ),
-        scrollTo: ( (targetElement.offsetLeft) * ( scrollContainer.offsetWidth / (scrollContainer.offsetWidth - ((window.innerWidth))))),
+        scrollTo: ( (targetElementwidth) * ( ScrollContainerWidth / (ScrollContainerWidth - ((windowWidth))))),
         // added windowinnerwidth so that screenscrolls to beginning of the section
         duration: .5
       })
@@ -74,5 +83,48 @@ document.querySelectorAll("#navmenu a").forEach(element => {
 
 
 
+
+window.addEventListener("resize", function(){targetElementwidth = targetElement.offsetLeft;})
+window.addEventListener("load", function(){targetElementwidth = targetElement.offsetLeft;})
+
+var windowWidth;
+
+window.addEventListener("resize", function(){windowWidth = window.innerWidth;})
+window.addEventListener("load", function(){windowWidth = window.innerWidth;})
+
+var ScrollContainerWidth;
+
+window.addEventListener("resize", function(){ScrollContainerWidth = scrollContainer.offsetWidth;})
+window.addEventListener("load", function(){ScrollContainerWidth = scrollContainer.offsetWidth;})
+
+
+
 window.addEventListener("resize", displayWindowSize )
 window.addEventListener("load", displayWindowSize )
+
+
+window.addEventListener("resize", displayWindowSizeMobile )
+window.addEventListener("load", displayWindowSizeMobile )
+
+
+
+
+var burgerButton= document.querySelector("#burger-container")
+burgerButton.addEventListener("click", OpenCloseMobileMenu)
+
+let CanISeeMobileMenu = false;
+function OpenCloseMobileMenu(){
+    if(CanISeeMobileMenu === false){
+        burgerTL.play();
+        mobileTL.play();
+        CanISeeMobileMenu = true;
+    }
+    else{
+        burgerTL.reverse();
+        mobileTL.reverse();
+        CanISeeMobileMenu = false;}
+}
+
+
+
+

@@ -1,4 +1,12 @@
-    #hscroll {
+
+body{
+  padding: 0;
+  margin: 0;
+}
+   
+   #hscroll {
+      display: flex;
+      flex-direction: column;
       #stage-1 {
         background: #dd3e54;
         background: linear-gradient(to right, #6be585, #dd3e54);
