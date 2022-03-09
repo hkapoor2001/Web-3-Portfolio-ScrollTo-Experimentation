@@ -1,248 +1,131 @@
-import { HorizontalScroll } from "./scrolltrigger";
-import { menuButtons } from "./menuAnimation.js";
-// import{ scrolltoProjects } from "./Scrollto"
-import { displayWindowSize } from "./windowSize.js";
-import { displayWindowSizeMobile } from "./windowSize.js";
-import { burgerTL } from "./burgerAnimation.js";
-import { mobileTL } from "./mobilemenuAnimation.js";
 
-HorizontalScroll();
-menuButtons();
-// scrolltoProjects();
+// --------Imports start here--------
+
+
+import { gsap } from "gsap";
 
 
 
-import { menuTL } from "./menuAnimation.js";
-
-var menuButton= document.querySelector("#nav-button-container")
-menuButton.addEventListener("click", OpenCloseMenu)
-var exitmenuButton= document.querySelector("#exit-nav-button-container")
-exitmenuButton.addEventListener("click", OpenCloseMenu)
-let CanISeeMenu = false;
-function OpenCloseMenu(){
-    if(CanISeeMenu === false){
-        menuTL.play();
-        CanISeeMenu = true;
-    }
-    else{
-        menuTL.reverse();
-        CanISeeMenu = false;
-    }
-}
+// --------Imports end here--------
 
 
+// --------Code for horizontal Scroll Starts here--------
 
-import { gsap } from "gsap/all";
-import { ScrollToPlugin } from "gsap/ScrollToPlugin"
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
-
-gsap.registerPlugin(ScrollToPlugin);
-
-let scrollContainer = document.querySelector("#hscroll");
-const wideViewport = window.matchMedia("(min-width: 1024px)");
-
-// document.querySelectorAll("#navmenu a").forEach(element => {
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
   
-//   element.addEventListener('click', function(e) {
-    
-//     e.preventDefault();
-//     const id = this.getAttribute('href').split('#')[1];
-    
-//     const targetElement = document.getElementById(id)
-//     // const navBar = document.getElementById('masthead')
+  let scrollContainer = document.querySelector("#hscroll");
 
-
-//     if(wideViewport.matches) {
-//       // gsap.to(window, {
-//       //   // scrollTo: ( (targetElement.offsetLeft) * ( scrollContainer.offsetWidth / (scrollContainer.offsetWidth - targetElement.offsetWidth)) ),
-//       //   scrollTo: ( (targetElement.offsetLeft) * ( scrollContainer.offsetWidth / (scrollContainer.offsetWidth - ((window.innerWidth))))),
-//       //   // added windowinnerwidth so that screenscrolls to beginning of the section
-//       //   duration: .5
-//       // })
-//       gsap.to(window, {
-//         // scrollTo: ( (targetElement.offsetLeft) * ( scrollContainer.offsetWidth / (scrollContainer.offsetWidth - targetElement.offsetWidth)) ),
-//         scrollTo: ( (targetElementwidth) * ( ScrollContainerWidth / (ScrollContainerWidth - ((windowWidth))))),
-//         // added windowinnerwidth so that screenscrolls to beginning of the section
-//         duration: .5
-//       })
-//       menuTL.reverse();
-//       CanISeeMenu = false;
-//     } else {
-//       gsap.to(window, {
-//         scrollTo: targetElement,
-//         duration: .5
-//       })
-//       menuTL.reverse();
-//       CanISeeMenu = false
-//     }
-    
-//   });
+  ScrollTrigger.matchMedia({
+    "(min-width: 1200px)":function(){
+      gsap.to(scrollContainer, {
+        x: () => -(scrollContainer.scrollWidth - document.documentElement.clientWidth) + "px",
+        ease: "none",
+        scrollTrigger: {
+          trigger: scrollContainer,
+          invalidateOnRefresh: true,
+          pin: true,
+          scrub: 1,
+          end: () => "+=" + scrollContainer.offsetWidth
+        }
+      })
+    }
   
-// });
+  })
+  
+  
+// --------Code for horizontal Scroll ends here--------
+
+      
 
 
+// code for scrollto starts here
 
-// window.addEventListener("resize", function(){appelWidth = appel.offsetLeft;})
-// window.addEventListener("load", function(){appelWidth = appel.offsetLeft;})
+var logo= document.querySelector("#logo")
 
-var appellink= document.querySelector("#appellink")
+var intro= document.querySelector("#intro")
 
-var appel= document.querySelector("#stage-2")
-
-appellink.addEventListener('click', function() {
-
-  if(wideViewport.matches) {
-
-    console.log("-------------------------------------");
-    console.log(appel.offsetLeft + "this is appel.offsetLeft"), 
-    console.log(appelWidth + "this is appelwidth");
-    console.log(scrollContainer.offsetWidth + "this is scrollContainer.offsetWidth"), 
-    console.log(ScrollContainerWidth + "this is ScrollContainerWidth");
-    console.log(windowWidth + "this is the window width"), 
-    console.log(window.innerWidth + "this is the window inner width");
-    console.log("-------------------------------------");
-
+logo.addEventListener('click', function() {
     gsap.to(window, {
-      scrollTo: ( (appelWidth) * ( ScrollContainerWidth / (ScrollContainerWidth - windowWidth))),
+      scrollTo: ( (intro.offsetLeft) * ( scrollContainer.offsetWidth / (scrollContainer.offsetWidth - window.innerWidth))),
       duration: .5,
       invalidateOnRefresh: true
     })
-    menuTL.reverse();
-    CanISeeMenu = false;
-  } else {
+})
+
+var link1= document.querySelector("#link1")
+
+var stage1= document.querySelector("#stage1")
+
+link1.addEventListener('click', function() {
     gsap.to(window, {
-      scrollTo: appelWidth,
+      scrollTo: ( (stage1.offsetLeft) * ( scrollContainer.offsetWidth / (scrollContainer.offsetWidth - window.innerWidth))),
       duration: .5,
       invalidateOnRefresh: true
     })
-    menuTL.reverse();
-    CanISeeMenu = false
-  }
-});
-
-
-
-var netlink= document.querySelector("#netlink")
-
-
-// window.addEventListener("resize", function(){netWidth = net.offsetLeft;})
-// window.addEventListener("load", function(){netWidth = net.offsetLeft;})
-
-var net= document.querySelector("#stage-1")
-
-netlink.addEventListener('click', function() {
-
-
-  if(wideViewport.matches) {
-    gsap.to(window, {
-      scrollTo: ( (netWidth) * ( ScrollContainerWidth / (ScrollContainerWidth - ((windowWidth))))),
-      invalidateOnRefresh: true,
-      duration: .5
-    })
-    menuTL.reverse();
-    CanISeeMenu = false;
-  } else {
-    gsap.to(window, {
-      scrollTo: netWidth,
-      invalidateOnRefresh: true,
-      duration: .5
-    })
-    menuTL.reverse();
-    CanISeeMenu = false
-  }
-  
-});
-
-
-var windowWidth;
-
-var appelWidth;
-
-var netWidth;
-
-
-window.addEventListener("load", 
-function(){
-  netWidth = net.offsetLeft;
-  console.log(net.offsetLeft + "this is net.offsetLeft"), 
-  console.log(netWidth + "this is netwidth");
-  // ---------------------
-  appelWidth = appel.offsetLeft;
-  console.log(appel.offsetLeft + "this is appel.offsetLeft"), 
-  console.log(appelWidth + "this is appelwidth");
-  // ---------------------
-  ScrollContainerWidth = scrollContainer.offsetWidth;
-  console.log(scrollContainer.offsetWidth + "this is scrollContainer.offsetWidth"), 
-  console.log(ScrollContainerWidth + "this is ScrollContainerWidth");
-  // ---------------------
-  windowWidth = window.innerWidth;
-  console.log(windowWidth + "this is the window width"), 
-  console.log(window.innerWidth + "this is the window inner width");
-  // ---------------------
-  displayWindowSize();
-  displayWindowSizeMobile();
 })
 
 
-window.addEventListener("resize", 
-function(){
-  // ---------------------
-  netWidth = net.offsetLeft;
-  console.log(net.offsetLeft + "this is net.offsetLeft"), 
-  console.log(netWidth + "this is netwidth");
-  // ---------------------
-  appelWidth = appel.offsetLeft;
-  console.log(appel.offsetLeft + "this is appel.offsetLeft"), 
-  console.log(appelWidth + "this is appelwidth");
-  // ---------------------
-  ScrollContainerWidth = scrollContainer.offsetWidth;
-  console.log(scrollContainer.offsetWidth + "this is scrollContainer.offsetWidth"), 
-  console.log(ScrollContainerWidth + "this is ScrollContainerWidth");
-  // ---------------------
-  windowWidth = window.innerWidth;
-  console.log(windowWidth + "this is the window width"), 
-  console.log(window.innerWidth + "this is the window inner width");
-  // ---------------------
-  displayWindowSize();
-  displayWindowSizeMobile();
-  // ---------------------
+var link2= document.querySelector("#link2")
+
+var stage2= document.querySelector("#stage2")
+
+link2.addEventListener('click', function() {
+    gsap.to(window, {
+      scrollTo: ( (stage2.offsetLeft) * ( scrollContainer.offsetWidth / (scrollContainer.offsetWidth - window.innerWidth))),
+      duration: .5,
+      invalidateOnRefresh: true
+    })
 })
 
 
+var link3= document.querySelector("#link3")
 
-var ScrollContainerWidth;
+var stage3= document.querySelector("#stage3")
 
-// window.addEventListener("resize", function(){ScrollContainerWidth = scrollContainer.offsetWidth;})
-// window.addEventListener("load", function(){ScrollContainerWidth = scrollContainer.offsetWidth;})
-
-
-// window.addEventListener("resize", displayWindowSize )
-// window.addEventListener("load", displayWindowSize )
-
-
-// window.addEventListener("resize", displayWindowSizeMobile )
-// window.addEventListener("load", displayWindowSizeMobile )
+link3.addEventListener('click', function() {
+    gsap.to(window, {
+      scrollTo: ( (stage3.offsetLeft) * ( scrollContainer.offsetWidth / (scrollContainer.offsetWidth - window.innerWidth))),
+      duration: .5,
+      invalidateOnRefresh: true
+    })
+})
 
 
+var link4= document.querySelector("#link4")
+
+var stage4= document.querySelector("#stage4")
+
+link4.addEventListener('click', function() {
+    gsap.to(window, {
+      scrollTo: ( (stage4.offsetLeft) * ( scrollContainer.offsetWidth / (scrollContainer.offsetWidth - window.innerWidth))),
+      duration: .5,
+      invalidateOnRefresh: true
+    })
+})
 
 
-var burgerButton= document.querySelector("#burger-container")
-burgerButton.addEventListener("click", OpenCloseMobileMenu)
+var link5= document.querySelector("#link5")
 
-let CanISeeMobileMenu = false;
-function OpenCloseMobileMenu(){
-    if(CanISeeMobileMenu === false){
-        burgerTL.play();
-        mobileTL.play();
-        CanISeeMobileMenu = true;
-    }
-    else{
-        burgerTL.reverse();
-        mobileTL.reverse();
-        CanISeeMobileMenu = false;}
-}
+var stage5= document.querySelector("#stage5")
+
+link5.addEventListener('click', function() {
+    gsap.to(window, {
+      scrollTo: ( (stage5.offsetLeft) * ( scrollContainer.offsetWidth / (scrollContainer.offsetWidth - window.innerWidth))),
+      duration: .5,
+      invalidateOnRefresh: true
+    })
+})
+
+// code for scrollto ends here
 
 
 
 
+
+
+// --------Code for menu starts here-------
 

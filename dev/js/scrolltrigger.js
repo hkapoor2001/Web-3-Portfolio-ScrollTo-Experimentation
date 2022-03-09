@@ -3,15 +3,15 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
 
-export function HorizontalScroll(){
+HorizontalScroll(){
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
   
   // let sections = gsap.utils.toArray(".stage");
   let scrollContainer = document.querySelector("#hscroll");
   
-  ScrollTrigger.matchMedia({
-    "(min-width: 1200px)": function() {
+  ScrollTrigger({
+    function() {
       gsap.to(scrollContainer, {
         x: () => -(scrollContainer.scrollWidth - document.documentElement.clientWidth) + "px",
         ease: "none",
@@ -25,7 +25,7 @@ export function HorizontalScroll(){
       })
     }
   });
-  }
+}
 
 // export function HorizontalScroll(){
 

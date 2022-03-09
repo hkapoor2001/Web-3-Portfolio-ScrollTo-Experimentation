@@ -1,40 +1,40 @@
-#mobile-nav{
-    @include xl{
-        display: none;
-    }
+// #mobile-nav{
+//     @include xl{
+//         display: none;
+//     }
     
-    background-color: #2C2C2C;
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    z-index: 10;
-    display: grid;
-    grid-template-columns: 5% 90% 5%;
-    grid-template-rows: 30% 40% 30%;
-    grid-template-areas: 
-    " . . . "
-    ". mobilenav ."
-    " . . . ";
+//     background-color: #2C2C2C;
+//     width: 100vw;
+//     height: 100vh;
+//     position: fixed;
+//     z-index: 10;
+//     display: grid;
+//     grid-template-columns: 5% 90% 5%;
+//     grid-template-rows: 30% 40% 30%;
+//     grid-template-areas: 
+//     " . . . "
+//     ". mobilenav ."
+//     " . . . ";
 
-    #mobile-nav-container{
-        grid-area: mobilenav;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-start;
+//     #mobile-nav-container{
+//         grid-area: mobilenav;
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: space-between;
+//         align-items: flex-start;
     
-        .mobilelink{
-            color: white;
-            text-decoration: none;
-            font-size:30px;
-            font-weight: 300;
-            font-family: 'Open Sans', sans-serif;
-        }
+//         .mobilelink{
+//             color: white;
+//             text-decoration: none;
+//             font-size:30px;
+//             font-weight: 300;
+//             font-family: 'Open Sans', sans-serif;
+//         }
     
-        .mobilelink:hover{
-            font-weight: bold;
-        }
+//         .mobilelink:hover{
+//             font-weight: bold;
+//         }
     
-    }
+//     }
 
-}
+// }
