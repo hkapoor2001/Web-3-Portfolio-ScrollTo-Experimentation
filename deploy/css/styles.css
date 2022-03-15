@@ -46,11 +46,12 @@ html {
   z-index: 2;
 }
 #header-section #header-container #logo-container #logo {
-  font-family: "Bebas Neue", cursive;
+  font-family: "Bebas Neue", sans-serif;
   font-size: 35px;
+  cursor: pointer;
 }
 #header-section #header-container #logo-container #logo #logo-period {
-  color: #0029FF;
+  color: red;
 }
 #header-section #header-container #burger-container {
   grid-area: burger;
@@ -80,14 +81,14 @@ html {
     justify-content: flex-start;
   }
   #header-section #header-container #logo-container #logo {
-    font-family: "Bebas Neue", cursive;
+    font-family: "Bebas Neue", sans-serif;
     font-size: 35px;
   }
   #header-section #header-container #logo-container #logo #logo-period {
-    color: #0029FF;
+    color: red;
   }
   #header-section #header-container #logo-container #logo:hover {
-    color: #0029FF;
+    color: red;
   }
   #header-section #header-container #button-container {
     grid-area: buttons;
@@ -109,7 +110,7 @@ html {
     bottom: 0;
     width: 75vw;
     height: 85vh;
-    background-color: #0029FF;
+    background-color: #FF0000;
     border-radius: 0 3vh 0 0;
     display: grid;
     grid-template-columns: 95.5% 3.5% 1%;
@@ -119,6 +120,7 @@ html {
     grid-area: navbutton;
     display: flex;
     align-items: center;
+    cursor: pointer;
   }
   #masthead #inner-nav-container {
     grid-template-columns: 5% 90.5% 3.5% 1%;
@@ -135,11 +137,12 @@ html {
     grid-area: exitnavbutton;
     display: flex;
     align-items: center;
+    cursor: pointer;
   }
   #masthead #inner-nav-container #nav-menu-container {
     grid-area: navlinks;
     margin-top: 10%;
-    margin-bottom: 20%;
+    margin-bottom: 30%;
   }
   #masthead #inner-nav-container #nav-menu-container #navmenu {
     height: 100%;
@@ -154,7 +157,7 @@ html {
     text-decoration: none;
     font-size: 40px;
     font-weight: 300;
-    font-family: "Open Sans", sans-serif;
+    font-family: "IBM Plex Mono", sans-serif;
   }
   #masthead #inner-nav-container #nav-menu-container #navmenu .navlink:hover {
     font-weight: bold;
@@ -168,6 +171,40 @@ html {
     padding-inline-start: 0px;
   }
 }
+#mobile-nav {
+  background-color: #2C2C2C;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 5% 90% 5%;
+  grid-template-rows: 30% 40% 30%;
+  grid-template-areas: " . . . " ". mobilenav ." " . . . ";
+}
+@media (min-width: 1200px) {
+  #mobile-nav {
+    display: none;
+  }
+}
+#mobile-nav #mobile-nav-container {
+  grid-area: mobilenav;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+#mobile-nav #mobile-nav-container .mobilelink {
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 300;
+  font-family: "Open Sans", sans-serif;
+}
+#mobile-nav #mobile-nav-container .mobilelink:hover {
+  font-weight: bold;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -178,17 +215,13 @@ body {
   flex-direction: column;
 }
 #hscroll #intro {
-  background: white;
+  background: #FDFDFD;
   height: 100vh;
 }
 #hscroll #stage-1 {
-  background: #dd3e54;
-  background: linear-gradient(to right, #6be585, #dd3e54);
   height: 100vh;
 }
 #hscroll #stage2 {
-  background: #090979;
-  background: linear-gradient(to right, #090979, #00d4ff);
   height: 100vh;
 }
 #hscroll #stage3 {
@@ -213,57 +246,15 @@ body {
   }
 
   #hscroll {
-    width: 560vw;
+    width: fit-content;
     height: 100vh;
     display: flex;
     flex-direction: row;
   }
 
-  .stage {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    z-index: 0;
-    padding: 20px;
-  }
-
   .proxy {
     visibility: hidden;
     opacity: 0;
-  }
-
-  #btnright {
-    position: absolute;
-    z-index: 9999;
-    right: 30px;
-    bottom: 15px;
-    background: #fcc;
-    border: none;
-    color: #000;
-    font-size: 16px;
-    line-height: 1;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 100%;
-    width: 70px;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  #btncontact {
-    position: fixed;
-    z-index: 9999;
-    right: 0;
-    bottom: 30px;
-    background: #000;
-    border: none;
-    color: #fff;
-    font-size: 24px;
-    padding: 10px 15px;
-    cursor: pointer;
   }
 
   /*== For DEMO Styling Only==*/
@@ -277,31 +268,208 @@ body {
     margin: 0;
   }
 
-  a {
-    color: #fff;
-  }
-
-  .panel {
-    text-align: center;
-    color: #fff;
-    font-size: 2em;
-  }
-
   #intro {
+    display: grid;
+    grid-template-columns: 30% 55% 15%;
+    grid-template-areas: ". intro .";
     height: 100vh;
-    width: 80vw;
+    width: 50vw;
+  }
+  #intro #intro-div {
+    grid-area: intro;
+    padding-top: 28vh;
+  }
+  #intro #intro-div #intro-line-2 {
+    font-family: "IBM Plex Mono", sans-serif;
+    font-weight: 200;
+    font-size: 20px;
+  }
+  #intro #intro-div #intro-line-3 {
+    padding-top: 5%;
+    display: grid;
+    grid-template-columns: 72% 8% 20%;
+    grid-template-areas: "text . arrow";
+  }
+  #intro #intro-div #intro-line-3 #intro-line-3-text-div {
+    display: flex;
+    align-items: center;
+  }
+  #intro #intro-div #intro-line-3 #intro-line-3-text-div #intro-line-3-text {
+    font-family: "IBM Plex Mono", sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    grid-area: text;
+  }
+  #intro #intro-div #intro-line-3 #intro-arrow-div {
+    grid-area: arrow;
+    display: flex;
+    align-items: center;
   }
 
   #stage1 {
-    background: #dd3e54;
-    background: linear-gradient(to right, #6be585, #dd3e54);
-    width: 80vw;
+    background: #FDFDFD;
+    width: 550vw;
     height: 100vh;
+    display: grid;
+    grid-template-columns: 2% 15% 27% 18% 15% 15% auto;
+    grid-template-areas: ". masthead intro inspiration process final next";
+  }
+  #stage1 #masthead-div {
+    grid-area: masthead;
+    padding-top: 18vh;
+  }
+  #stage1 #masthead-div #masthead-text-div {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-areas: ". text";
+    overflow: hidden;
+  }
+  #stage1 #masthead-div #masthead-text-div #masthead-text {
+    grid-area: text;
+    color: black;
+    font-family: "IBM Plex Mono", sans-serif;
+    font-size: 15px;
+    text-align: left;
+    font-weight: lighter;
+  }
+  #stage1 #masthead-div #masthead-text-div #masthead-text #net-art-span {
+    font-weight: bold;
+  }
+  #stage1 #net-intro-div {
+    grid-area: intro;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #stage1 #net-intro-div #net-intro-text {
+    width: 30%;
+    padding-left: 3%;
+    padding-right: 5%;
+    padding-top: 20vh;
+    color: black;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 16px;
+    text-align: left;
+    font-weight: lighter;
+  }
+  #stage1 #net-intro-div #net-intro-text h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 60px;
+    margin-bottom: 0%;
+  }
+  #stage1 #net-intro-div #net-intro-text h2 {
+    font-family: "IBM Plex Mono", sans-serif;
+    font-size: 25px;
+    font-weight: 200;
+    margin-bottom: 0%;
+    margin-top: 0%;
+  }
+  #stage1 #net-intro-div #net-hero {
+    background-image: url(../img/net-hero.png);
+    background-size: cover;
+    background-repeat: none;
+    width: 60%;
+  }
+  #stage1 #net-intro-div #net-circle {
+    position: absolute;
+    z-index: 3;
+    bottom: 0px;
+    height: 50vh;
+    margin-left: 26%;
+  }
+  #stage1 #net-inspiration-div {
+    grid-area: inspiration;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 20vh;
+  }
+  #stage1 #net-inspiration-div h1 {
+    grid-area: title;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 60px;
+    margin-bottom: 0%;
+    padding-bottom: 0%;
+  }
+  #stage1 #net-inspiration-div #net-inspiration-content-div {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "image text";
+    grid-gap: 5%;
+  }
+  #stage1 #net-inspiration-div #net-inspiration-content-div #net-inspiration-image {
+    width: 100%;
+    grid-area: image;
+  }
+  #stage1 #net-inspiration-div #net-inspiration-content-div #net-inspiration-text-div {
+    grid-area: text;
+  }
+  #stage1 #net-process-exploration-div {
+    grid-area: process;
+    display: grid;
+    grid-template-areas: "column1 column2";
+    grid-template-columns: 40% 60%;
+    padding-right: 20%;
+  }
+  #stage1 #net-process-exploration-div #net-process-exploration-column-1 {
+    grid-area: column1;
+    padding-top: 20vh;
+  }
+  #stage1 #net-process-exploration-div #net-process-exploration-column-1 h1 {
+    grid-area: title;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 60px;
+    margin-bottom: 0%;
+    padding-bottom: 0%;
+  }
+  #stage1 #net-process-exploration-div #net-process-exploration-column-1 img {
+    max-width: 70%;
+  }
+  #stage1 #net-process-exploration-div #net-process-exploration-column-2 {
+    grid-area: column2;
+  }
+  #stage1 #net-process-exploration-div #net-process-exploration-column-2 #masthead-progress-img {
+    padding-top: 20%;
+    width: 100%;
+    margin-top: 2vh;
+  }
+  #stage1 #net-final-images-div {
+    grid-area: final;
+    padding-top: 10vh;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-areas: "img .";
+  }
+  #stage1 #net-final-images-div #net-final-images-grid-div {
+    grid-area: img;
+  }
+  #stage1 #net-final-images-div #net-final-images-grid-div h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 40px;
+    margin-bottom: 0%;
+    padding-bottom: 0%;
+    text-align: center;
+  }
+  #stage1 #net-final-images-div #net-final-images-grid-div img {
+    width: 100%;
+  }
+  #stage1 #net-next-project-div {
+    grid-area: next;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding-bottom: 15vh;
+  }
+  #stage1 #net-next-project-div h1 {
+    font-family: "IBM Plex Mono", sans-serif;
+    font-weight: 200;
+    font-size: 60px;
+    margin-bottom: 0%;
+    padding-right: 5%;
   }
 
   #stage2 {
-    background: #090979;
-    background: linear-gradient(to right, #090979, #00d4ff);
+    background: #FDFDFD;
     width: 100vw;
     height: 100vh;
   }

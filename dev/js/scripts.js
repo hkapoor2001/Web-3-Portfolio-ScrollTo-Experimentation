@@ -1,21 +1,19 @@
 
 // --------Imports start here--------
 
-
 import { gsap } from "gsap";
-
-
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import { burgerTL } from "./burgerAnimation.js";
+import { arrowBounce } from "./arrowbouncingAnimation";
 
 // --------Imports end here--------
+
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 
 // --------Code for horizontal Scroll Starts here--------
 
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-
-gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
   
   let scrollContainer = document.querySelector("#hscroll");
 
@@ -49,6 +47,7 @@ var logo= document.querySelector("#logo")
 var intro= document.querySelector("#intro")
 
 logo.addEventListener('click', function() {
+  // console.log("logo was clicked"),
     gsap.to(window, {
       scrollTo: ( (intro.offsetLeft) * ( scrollContainer.offsetWidth / (scrollContainer.offsetWidth - window.innerWidth))),
       duration: .5,
@@ -66,6 +65,8 @@ link1.addEventListener('click', function() {
       duration: .5,
       invalidateOnRefresh: true
     })
+    menuTL.reverse();
+    CanISeeMenu = false
 })
 
 
@@ -79,6 +80,8 @@ link2.addEventListener('click', function() {
       duration: .5,
       invalidateOnRefresh: true
     })
+    menuTL.reverse();
+    CanISeeMenu = false
 })
 
 
@@ -92,6 +95,8 @@ link3.addEventListener('click', function() {
       duration: .5,
       invalidateOnRefresh: true
     })
+    menuTL.reverse();
+    CanISeeMenu = false
 })
 
 
@@ -105,6 +110,8 @@ link4.addEventListener('click', function() {
       duration: .5,
       invalidateOnRefresh: true
     })
+    menuTL.reverse();
+    CanISeeMenu = false
 })
 
 
@@ -118,6 +125,8 @@ link5.addEventListener('click', function() {
       duration: .5,
       invalidateOnRefresh: true
     })
+    menuTL.reverse();
+    CanISeeMenu = false
 })
 
 // code for scrollto ends here
@@ -125,7 +134,148 @@ link5.addEventListener('click', function() {
 
 
 
+// ---------------------------Code for menu starts here---------------------------
 
 
-// --------Code for menu starts here-------
+// --------Code that moves xl menu to the side-------
 
+function XLMenu(){
+  let menu = document.querySelector("#masthead")
+  let menuWidth = -menu.offsetWidth
+  gsap.set("#masthead", {x:menuWidth - (menuWidth / 20)})
+}
+// --------Code that moves xl menu to the side-------
+
+
+
+// -------- Code for XL menu animation starts here-------
+gsap.set("#inner-nav-container", {scaleX:0, transformOrigin: "left center"})
+
+const menuTL = new gsap.timeline({paused:true});
+
+const menuAnimation = new gsap.timeline();
+
+menuAnimation.to("#masthead", {duration:0.3, y:0, x:0, ease: "power1.out" },"same")
+menuAnimation.to("#inner-nav-container", {background:"linear-gradient(to right, #2C2C2C 100%, transparent)", duration:0.32, scaleX:1, ease: "none"},"same")
+menuTL.add(menuAnimation)
+
+
+
+var menuButton= document.querySelector("#nav-button-container")
+menuButton.addEventListener("click", OpenCloseMenu)
+var exitmenuButton= document.querySelector("#exit-nav-button-container")
+exitmenuButton.addEventListener("click", OpenCloseMenu)
+let CanISeeMenu = false;
+function OpenCloseMenu(){
+  if(CanISeeMenu === false){
+      menuTL.play();
+      CanISeeMenu = true;
+  }
+  else{
+      menuTL.reverse();
+      CanISeeMenu = false;
+  }
+}
+
+
+function CloseMenuOnResize(){
+  if(CanISeeMenu === true){
+    OpenCloseMenu();
+}
+}
+
+
+// -------- Code for XL menu animation ends here-------
+
+
+
+
+
+
+
+
+// // -------- Code for mobile menu animation starts here-------
+
+
+// code that moves mobile menu off screen starts here 
+
+function MobileMenu (){
+console.log("mobilemenuisoffset")
+let mobilemenu = document.querySelector("#mobile-nav")
+let mobilemenuHeight = -mobilemenu.offsetHeight
+gsap.set("#mobile-nav", {y:mobilemenuHeight})
+}
+
+// code that moves mobile menu off screen ends here 
+
+// mobile menu animation starts here
+const mobileTL = new gsap.timeline({paused:true});
+mobileTL.to("#mobile-nav", {duration:0.3, y:0, x:0});
+
+
+var burgerButton= document.querySelector("#burger-container")
+burgerButton.addEventListener("click", OpenCloseMobileMenu)
+
+let CanISeeMobileMenu = false;
+function OpenCloseMobileMenu(){
+    if(CanISeeMobileMenu === false){
+        burgerTL.play();
+        mobileTL.play();
+        CanISeeMobileMenu = true;
+    }
+    else{
+        burgerTL.reverse();
+        mobileTL.reverse();
+        CanISeeMobileMenu = false;}
+}
+// mobile menu animation starts here
+
+// // -------- Code for mobile menu animation ends here-------
+
+
+// ---------------------------Code for menu ends here---------------------------
+
+
+
+
+// // -------- Code for arrow bounce-------
+
+arrowBounce();
+
+// // -------- Code for arrow bounce-------
+
+
+
+
+
+
+
+// Resize event Listener
+
+window.addEventListener("resize", XLMenu)
+window.addEventListener("resize", MobileMenu)
+window.addEventListener("resize", CloseMenuOnResize)
+
+
+
+
+window.addEventListener("load", XLMenu)
+window.addEventListener("load", MobileMenu )
+
+
+
+// experimenting with scrolltrigger animations 
+
+// gsap.to("#masthead-text",{
+//   alpha:0,
+//   scrollTrigger: {
+//       trigger: "#masthead-div",
+//       start: "50%",
+//       end: "+=500",
+//       scrub: 1,
+//       markers:true
+//     }
+// });
+
+
+// experimenting with scrolltrigger animations 

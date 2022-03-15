@@ -31,15 +31,18 @@
       "plM" : 52780316221407,
       "prP" : 0
     },
-    "\/deploy\/img\/Arrow.svg" : {
-      "ft" : 2097152,
-      "miP" : 0,
-      "oA" : 2,
-      "oAP" : "\/deploy\/img\/Arrow.svg",
+    "\/deploy\/img\/Appel-Farm-Hero.png" : {
+      "ft" : 32768,
+      "iS" : 125461,
+      "oA" : 0,
+      "oAP" : "\/deploy\/img\/Appel-Farm-Hero.png",
       "oF" : 0,
+      "oIPL" : 0,
       "opt" : 0,
-      "plM" : 52780316221407,
-      "prP" : 0
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
     },
     "\/deploy\/img\/burger.svg" : {
       "ft" : 2097152,
@@ -71,11 +74,169 @@
       "plM" : 52780316221407,
       "prP" : 0
     },
+    "\/deploy\/img\/Hemani-Kapoor-Intro-Logo.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/deploy\/img\/Hemani-Kapoor-Intro-Logo.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
     "\/deploy\/img\/hemani.svg" : {
       "ft" : 2097152,
       "miP" : 0,
       "oA" : 2,
       "oAP" : "\/deploy\/img\/hemani.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/deploy\/img\/Intro text.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/deploy\/img\/Intro text.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/deploy\/img\/Intro-Text.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/deploy\/img\/Intro-Text.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/deploy\/img\/IntroArrow.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/deploy\/img\/IntroArrow.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/deploy\/img\/lasercuttingtemplate.png" : {
+      "ft" : 32768,
+      "iS" : 25763,
+      "oA" : 0,
+      "oAP" : "\/deploy\/img\/lasercuttingtemplate.png",
+      "oF" : 0,
+      "oIPL" : 1,
+      "opt" : 1,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/deploy\/img\/mastheadexploration.png" : {
+      "ft" : 32768,
+      "iS" : 34082,
+      "oA" : 0,
+      "oAP" : "\/deploy\/img\/mastheadexploration.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/deploy\/img\/menu button.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/deploy\/img\/menu button.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/deploy\/img\/menubutton.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/deploy\/img\/menubutton.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/deploy\/img\/net-hero.png" : {
+      "ft" : 32768,
+      "iS" : 1836367,
+      "oA" : 0,
+      "oAP" : "\/deploy\/img\/net-hero.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/deploy\/img\/net-inspiration-image.jpg" : {
+      "ft" : 16384,
+      "iS" : 263127,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/deploy\/img\/net-inspiration-image.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/deploy\/img\/net-intro-circle.png" : {
+      "ft" : 32768,
+      "iS" : 620404,
+      "oA" : 0,
+      "oAP" : "\/deploy\/img\/net-intro-circle.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/deploy\/img\/net-masthead.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/deploy\/img\/net-masthead.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/deploy\/img\/netfinalimage1.png" : {
+      "ft" : 32768,
+      "iS" : 1103061,
+      "oA" : 0,
+      "oAP" : "\/deploy\/img\/netfinalimage1.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/deploy\/img\/nextprojectarrow.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/deploy\/img\/nextprojectarrow.svg",
       "oF" : 0,
       "opt" : 0,
       "plM" : 52780316221407,
@@ -90,6 +251,19 @@
       "opt" : 0,
       "plM" : 52780316221407,
       "prP" : 0
+    },
+    "\/deploy\/img\/scelero-background.png" : {
+      "ft" : 32768,
+      "iS" : 1462665,
+      "oA" : 0,
+      "oAP" : "\/deploy\/img\/scelero-background.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
     },
     "\/deploy\/index.html" : {
       "cB" : 0,
@@ -166,6 +340,17 @@
       "oAP" : "\/deploy\/index.html",
       "oF" : 2
     },
+    "\/dev\/js\/arrowbouncingAnimation.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/dev\/js\/arrowbouncingAnimation-min.js",
+      "oF" : 1,
+      "sC" : 3,
+      "tS" : 0
+    },
     "\/dev\/js\/burgerAnimation.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -177,35 +362,24 @@
       "sC" : 3,
       "tS" : 0
     },
-    "\/dev\/js\/buttonAnimation.js" : {
+    "\/dev\/js\/menu.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/dev\/js\/buttonAnimation-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/dev\/js\/menuAnimation.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/dev\/js\/menuAnimation-min.js",
+      "oAP" : "\/dev\/js\/menu-min.js",
       "oF" : 1,
       "sC" : 3,
       "tS" : 0
     },
-    "\/dev\/js\/mobilemenuAnimation.js" : {
+    "\/dev\/js\/netsectionAnimation.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/dev\/js\/mobilemenuAnimation-min.js",
+      "oAP" : "\/dev\/js\/netsectionAnimation-min.js",
       "oF" : 1,
       "sC" : 3,
       "tS" : 0
@@ -218,39 +392,6 @@
       "oA" : 0,
       "oAP" : "\/deploy\/js\/scripts-min.js",
       "oF" : 3,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/dev\/js\/Scrollto.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/dev\/js\/Scrollto-min.js",
-      "oF" : 1,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/dev\/js\/scrolltrigger.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/dev\/js\/scrolltrigger-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/dev\/js\/WindowSize.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/dev\/js\/WindowSize-min.js",
-      "oF" : 1,
       "sC" : 3,
       "tS" : 0
     },

@@ -28,11 +28,12 @@
             position: relative;
             z-index: 2;
             #logo{
-                font-family: 'Bebas Neue', cursive;
+                font-family: 'Bebas Neue', sans-serif;
                 font-size: 35px;
+                cursor:pointer;
 
                 #logo-period{
-                    color: #0029FF;
+                    color: red;
                 }
 
             }
@@ -66,17 +67,17 @@
                 display: flex;
                 justify-content: flex-start;
                 #logo{
-                    font-family: 'Bebas Neue', cursive;
+                    font-family: 'Bebas Neue', sans-serif;
                     font-size: 35px;
     
                     #logo-period{
-                        color: #0029FF;
+                        color: red;
                     }
     
                 }
     
                 #logo:hover{
-                    color: #0029FF;
+                    color: red;
                 }
             }
     
