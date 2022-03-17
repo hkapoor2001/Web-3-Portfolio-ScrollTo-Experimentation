@@ -6,6 +6,26 @@ ul {
   padding-inline-start: 0px;
 }
 
+h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 60px;
+  margin-bottom: 0%;
+  font-weight: 100;
+}
+
+h2 {
+  font-family: "IBM Plex Mono", sans-serif;
+  font-size: 25px;
+  font-weight: 200;
+  margin-bottom: 0%;
+  margin-top: 0%;
+}
+
+p {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 16px;
+}
+
 /* =============
     Mixins
 ============= */
@@ -215,29 +235,163 @@ body {
   flex-direction: column;
 }
 #hscroll #intro {
-  background: #FDFDFD;
-  height: 100vh;
+  display: grid;
+  grid-template-columns: 5% 90% 5%;
+  grid-template-areas: ". intro .";
 }
-#hscroll #stage-1 {
-  height: 100vh;
+#hscroll #intro #intro-div {
+  grid-area: intro;
+  padding-top: 15vh;
+}
+#hscroll #intro #intro-div p {
+  font-family: "IBM Plex Mono", sans-serif;
+  font-weight: 100;
+  font-size: 20px;
+}
+#hscroll #intro #intro-div #intro-line-3 {
+  display: none;
+}
+#hscroll #stage1 {
+  margin-top: 15%;
+}
+#hscroll #stage1 #masthead-div {
+  display: grid;
+  grid-template-columns: 5% 90% 5%;
+  grid-template-areas: ". masthead ." ". text .";
+}
+#hscroll #stage1 #masthead-div #net-masthead {
+  grid-area: masthead;
+}
+#hscroll #stage1 #masthead-div #masthead-text-div {
+  grid-area: text;
+}
+#hscroll #stage1 #net-intro-div {
+  margin-top: 15%;
+}
+#hscroll #stage1 #net-intro-div #net-intro-text {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+#hscroll #stage1 #net-intro-div #net-intro-text h1 {
+  font-size: 50px;
+}
+#hscroll #stage1 #net-intro-div #net-hero {
+  margin-top: 5vh;
+  height: 40vh;
+  background-image: url(../img/net-hero.png);
+  background-position: center;
+  background-size: cover;
+}
+#hscroll #stage1 #net-intro-div img {
+  display: none;
+}
+#hscroll #stage1 #net-inspiration-div {
+  margin-top: 15%;
+}
+#hscroll #stage1 #net-inspiration-div h1 {
+  font-size: 50px;
+  margin-left: 5%;
+}
+#hscroll #stage1 #net-inspiration-div img {
+  width: 100%;
+}
+#hscroll #stage1 #net-inspiration-div p {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+#hscroll #stage1 #net-process-exploration-div img {
+  width: 100%;
+}
+#hscroll #stage1 #net-process-exploration-div p {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+#hscroll #stage1 #net-final-images-div {
+  margin-top: 15%;
+}
+#hscroll #stage1 #net-final-images-div img {
+  width: 100%;
+}
+#hscroll #stage1 #net-next-project-div {
+  display: none;
 }
 #hscroll #stage2 {
-  height: 100vh;
+  margin-top: 20%;
+}
+#hscroll #stage2 #appel-intro-section {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+#hscroll #stage2 #appel-pages-section {
+  margin-top: 15%;
+  display: block;
+}
+#hscroll #stage2 #appel-pages-section img {
+  width: 100%;
+}
+#hscroll #stage2 #appel-farm-next-project {
+  display: none;
 }
 #hscroll #stage3 {
-  background: #833ab4;
-  background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
-  height: 100vh;
+  margin-top: 20%;
 }
-#hscroll #stage4 {
-  background: #009FFF;
-  background: linear-gradient(to right, #009FFF, #ec2F4B);
-  height: 100vh;
+#hscroll #stage3 #Scelero-Process-Explorations #scelero-process-text {
+  margin-left: 15%;
+  margin-right: 15%;
 }
-#hscroll #stage5 {
-  background: #8A2387;
-  background: linear-gradient(to right, #8A2387, #E94057, #F27121);
-  height: 100vh;
+#hscroll #stage3 #Scelero-Process-Explorations #scelero-process-img-div {
+  width: 100%;
+}
+#hscroll #stage3 #Scelero-Process-Explorations #scelero-process-img-div #scelero-process-img #scelero-process-column1 img {
+  width: 100%;
+}
+#hscroll #stage3 #Scelero-Process-Explorations #scelero-process-img-div #scelero-process-img #scelero-process-column2 img {
+  width: 100%;
+}
+#hscroll #stage3 #scelero-pages {
+  display: block;
+}
+#hscroll #stage3 #scelero-pages img {
+  width: 100%;
+}
+#hscroll #stage3 #scelero-next {
+  display: none;
+}
+#hscroll #stage4 #nestinghousehero {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+#hscroll #stage4 #nestinghousehero img {
+  display: none;
+}
+#hscroll #stage4 #nestinghouseprogress img {
+  width: 100%;
+}
+#hscroll #stage4 #nestinghousefinallogos img {
+  width: 100%;
+}
+#hscroll #stage4 #nestinghousebrandextensions img {
+  width: 100%;
+}
+#hscroll #stage4 #nestinghousenext {
+  display: none;
+}
+#hscroll #stage5 #weshero {
+  display: none;
+}
+#hscroll #stage5 #wesdetails img {
+  width: 100%;
+}
+#hscroll #stage5 #wesmap img {
+  width: 100%;
+}
+#hscroll #aboutsection img {
+  margin-left: 20%;
+  width: 80%;
+}
+#hscroll #aboutsection p {
+  margin-right: 5%;
+  margin-left: 5%;
 }
 
 @media (min-width: 1200px) {
@@ -250,6 +404,546 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: row;
+  }
+  #hscroll #intro {
+    display: grid;
+    grid-template-columns: 30% 55% 15%;
+    grid-template-areas: ". intro .";
+    height: 100vh;
+    width: 50vw;
+  }
+  #hscroll #intro #intro-div {
+    grid-area: intro;
+    padding-top: 28vh;
+  }
+  #hscroll #intro #intro-div #Intro-logo {
+    padding: 0%;
+    width: 100%;
+  }
+  #hscroll #intro #intro-div #intro-line-2 {
+    font-family: "IBM Plex Mono", sans-serif;
+    font-weight: 200;
+    font-size: 20px;
+  }
+  #hscroll #intro #intro-div #intro-line-3 {
+    padding-top: 5%;
+    display: grid;
+    grid-template-columns: 72% 8% 20%;
+    grid-template-areas: "text . arrow";
+  }
+  #hscroll #intro #intro-div #intro-line-3 #intro-line-3-text-div {
+    display: flex;
+    align-items: center;
+  }
+  #hscroll #intro #intro-div #intro-line-3 #intro-line-3-text-div #intro-line-3-text {
+    font-family: "IBM Plex Mono", sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    grid-area: text;
+  }
+  #hscroll #intro #intro-div #intro-line-3 #intro-arrow-div {
+    grid-area: arrow;
+    display: flex;
+    align-items: center;
+  }
+  #hscroll #stage1 {
+    margin-top: 0%;
+    background: #FDFDFD;
+    width: 550vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 2% 15% 27% 18% 15% 15% auto;
+    grid-template-areas: ". masthead intro inspiration process final next";
+  }
+  #hscroll #stage1 #masthead-div {
+    grid-area: masthead;
+    padding-top: 18vh;
+    display: block;
+  }
+  #hscroll #stage1 #masthead-div #masthead-text-div {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-areas: ". text";
+    overflow: hidden;
+  }
+  #hscroll #stage1 #masthead-div #masthead-text-div #masthead-text {
+    grid-area: text;
+    color: black;
+    font-family: "IBM Plex Mono", sans-serif;
+    font-size: 15px;
+    text-align: left;
+    font-weight: lighter;
+  }
+  #hscroll #stage1 #masthead-div #masthead-text-div #masthead-text #net-art-span {
+    font-weight: bold;
+  }
+  #hscroll #stage1 #net-intro-div {
+    margin-top: 0%;
+    grid-area: intro;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #hscroll #stage1 #net-intro-div #net-intro-text {
+    margin-left: 0%;
+    margin-right: 0%;
+    width: 30%;
+    padding-left: 3%;
+    padding-right: 5%;
+    padding-top: 20vh;
+    color: black;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 16px;
+    text-align: left;
+    font-weight: lighter;
+  }
+  #hscroll #stage1 #net-intro-div #net-intro-text h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 60px;
+    margin-bottom: 0%;
+  }
+  #hscroll #stage1 #net-intro-div #net-intro-text h2 {
+    font-family: "IBM Plex Mono", sans-serif;
+    font-size: 25px;
+    font-weight: 200;
+    margin-bottom: 0%;
+    margin-top: 0%;
+  }
+  #hscroll #stage1 #net-intro-div #net-hero {
+    margin-top: 0;
+    height: 100vh;
+    background-image: url(../img/net-hero.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: none;
+    width: 60%;
+  }
+  #hscroll #stage1 #net-intro-div #net-circle {
+    position: absolute;
+    display: block;
+    z-index: 3;
+    bottom: 0px;
+    height: 50vh;
+    margin-left: 26%;
+  }
+  #hscroll #stage1 #net-inspiration-div {
+    margin-top: 0%;
+    grid-area: inspiration;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 20vh;
+  }
+  #hscroll #stage1 #net-inspiration-div p {
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+  #hscroll #stage1 #net-inspiration-div h1 {
+    grid-area: title;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 60px;
+    margin-bottom: 0%;
+    padding-bottom: 0%;
+  }
+  #hscroll #stage1 #net-inspiration-div #net-inspiration-content-div {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "image text";
+    grid-gap: 5%;
+  }
+  #hscroll #stage1 #net-inspiration-div #net-inspiration-content-div #net-inspiration-image {
+    width: 100%;
+    grid-area: image;
+  }
+  #hscroll #stage1 #net-inspiration-div #net-inspiration-content-div #net-inspiration-text-div {
+    grid-area: text;
+  }
+  #hscroll #stage1 #net-process-exploration-div {
+    grid-area: process;
+    display: grid;
+    grid-template-areas: "column1 column2";
+    grid-template-columns: 40% 60%;
+    padding-right: 20%;
+  }
+  #hscroll #stage1 #net-process-exploration-div #net-process-exploration-column-1 {
+    grid-area: column1;
+    padding-top: 20vh;
+  }
+  #hscroll #stage1 #net-process-exploration-div #net-process-exploration-column-1 h1 {
+    grid-area: title;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 60px;
+    margin-bottom: 0%;
+    padding-bottom: 0%;
+  }
+  #hscroll #stage1 #net-process-exploration-div #net-process-exploration-column-1 img {
+    width: 70%;
+  }
+  #hscroll #stage1 #net-process-exploration-div #net-process-exploration-column-1 p {
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+  #hscroll #stage1 #net-process-exploration-div #net-process-exploration-column-2 {
+    grid-area: column2;
+  }
+  #hscroll #stage1 #net-process-exploration-div #net-process-exploration-column-2 #masthead-progress-img {
+    padding-top: 20%;
+    width: 100%;
+    margin-top: 2vh;
+  }
+  #hscroll #stage1 #net-final-images-div {
+    margin-top: 0%;
+    grid-area: final;
+    padding-top: 10vh;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-areas: "img .";
+  }
+  #hscroll #stage1 #net-final-images-div #net-final-images-grid-div {
+    grid-area: img;
+  }
+  #hscroll #stage1 #net-final-images-div #net-final-images-grid-div h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 40px;
+    margin-bottom: 0%;
+    padding-bottom: 0%;
+    text-align: center;
+  }
+  #hscroll #stage1 #net-final-images-div #net-final-images-grid-div img {
+    width: 100%;
+  }
+  #hscroll #stage1 #net-next-project-div {
+    grid-area: next;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding-bottom: 15vh;
+  }
+  #hscroll #stage1 #net-next-project-div h1 {
+    font-family: "IBM Plex Mono", sans-serif;
+    font-weight: 200;
+    font-size: 60px;
+    margin-bottom: 0%;
+    padding-right: 5%;
+  }
+  #hscroll #stage2 {
+    margin-top: 0%;
+    background: #FDFDFD;
+    width: 800vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 13% 6% 10% 63% auto;
+    grid-template-areas: "hero intro logo images next";
+  }
+  #hscroll #stage2 #appel-farm-hero-div {
+    margin-left: 8%;
+    grid-area: hero;
+    background-image: url(../img/appel-farm-hero.png);
+    background-size: cover;
+    background-repeat: none;
+  }
+  #hscroll #stage2 #appel-intro-section {
+    grid-area: intro;
+    padding-left: 16vh;
+    padding-top: 20vh;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+  #hscroll #stage2 #appel-intro-section h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 60px;
+    margin-bottom: 0%;
+  }
+  #hscroll #stage2 #appel-intro-section h2 {
+    font-family: "IBM Plex Mono", sans-serif;
+    font-size: 25px;
+    font-weight: 200;
+    margin-bottom: 0%;
+    margin-top: 0%;
+  }
+  #hscroll #stage2 #appel-logo-section {
+    display: grid;
+    grid-template-columns: auto 60% auto;
+    grid-template-areas: " . logo . ";
+    padding-top: 25vh;
+  }
+  #hscroll #stage2 #appel-logo-section #logo {
+    grid-area: logo;
+  }
+  #hscroll #stage2 #appel-pages-section {
+    margin-top: 0%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #hscroll #stage2 #appel-pages-section img {
+    width: 14%;
+  }
+  #hscroll #stage2 #appel-farm-next-project {
+    grid-area: next;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding-bottom: 15vh;
+  }
+  #hscroll #stage2 #appel-farm-next-project h1 {
+    font-family: "IBM Plex Mono", sans-serif;
+    font-weight: 200;
+    font-size: 60px;
+    margin-bottom: 0%;
+    padding-right: 5%;
+  }
+  #hscroll #stage3 {
+    margin-top: 0%;
+    grid-area: images;
+    width: 900vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 26% 16% 2% auto 2% 7%;
+    grid-template-areas: "hero process . pages . next";
+  }
+  #hscroll #stage3 #scelero-hero {
+    grid-area: hero;
+    background-image: url(../img/scelero-hero.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+  }
+  #hscroll #stage3 #scelero-hero > div {
+    display: grid;
+    grid-template-columns: 64% auto 21.5%;
+    grid-template-areas: ". text .";
+  }
+  #hscroll #stage3 #scelero-hero > div #scelero-text {
+    grid-area: text;
+    padding-top: 20vh;
+  }
+  #hscroll #stage3 #Scelero-Process-Explorations {
+    grid-area: process;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    grid-template-areas: "text img";
+  }
+  #hscroll #stage3 #Scelero-Process-Explorations #scelero-process-text {
+    grid-area: text;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 20vh;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+  #hscroll #stage3 #Scelero-Process-Explorations #scelero-process-img-div {
+    width: 100%;
+    grid-area: img;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #hscroll #stage3 #Scelero-Process-Explorations #scelero-process-img-div #scelero-process-img {
+    display: grid;
+    grid-template-columns: 67% 33%;
+    grid-template-areas: "img1 img2";
+    gap: 34px;
+  }
+  #hscroll #stage3 #Scelero-Process-Explorations #scelero-process-img-div #scelero-process-img #scelero-process-column1 {
+    grid-area: img1;
+  }
+  #hscroll #stage3 #Scelero-Process-Explorations #scelero-process-img-div #scelero-process-img #scelero-process-column1 img {
+    width: 100%;
+  }
+  #hscroll #stage3 #Scelero-Process-Explorations #scelero-process-img-div #scelero-process-img #scelero-process-column2 {
+    grid-area: img2;
+    display: grid;
+    gap: 20px;
+  }
+  #hscroll #stage3 #Scelero-Process-Explorations #scelero-process-img-div #scelero-process-img #scelero-process-column2 img {
+    width: 100%;
+  }
+  #hscroll #stage3 #Scelero-Process-Explorations #scelero-process-img-div #scelero-process-img #scelero-process-column2 #scelero-process-image1 {
+    margin-left: 10%;
+  }
+  #hscroll #stage3 #scelero-pages {
+    grid-area: pages;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #hscroll #stage3 #scelero-pages img {
+    width: 17%;
+  }
+  #hscroll #stage3 #scelero-pages .scelero-cover {
+    width: 9%;
+  }
+  #hscroll #stage3 #scelero-next {
+    grid-area: next;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding-bottom: 15vh;
+  }
+  #hscroll #stage3 #scelero-next h1 {
+    font-family: "IBM Plex Mono", sans-serif;
+    font-weight: 200;
+    font-size: 60px;
+    margin-bottom: 0%;
+    padding-right: 5%;
+  }
+  #hscroll #stage4 {
+    width: 500vw;
+    height: 100vh;
+    position: relative;
+    display: grid;
+    grid-template-columns: 18% 16% 21% 30% auto;
+    grid-template-areas: "hero progress logos extensions next";
+  }
+  #hscroll #stage4 #nestinghousehero {
+    grid-area: hero;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+  #hscroll #stage4 #nestinghousehero img {
+    display: block;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+  }
+  #hscroll #stage4 #nestinghousehero > div {
+    height: 100vh;
+    z-index: 3;
+    margin-left: 60%;
+    margin-right: 2%;
+    margin-top: 20vh;
+  }
+  #hscroll #stage4 #nestinghouseprogress {
+    height: 100vh;
+    grid-area: progress;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #hscroll #stage4 #nestinghouseprogress img {
+    height: 60vh;
+  }
+  #hscroll #stage4 #nestinghousefinallogos {
+    height: 100vh;
+    grid-area: logos;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 10%;
+  }
+  #hscroll #stage4 #nestinghousefinallogos img {
+    height: 80vh;
+  }
+  #hscroll #stage4 #nestinghousebrandextensions {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #hscroll #stage4 #nestinghousebrandextensions img {
+    height: 80%;
+  }
+  #hscroll #stage4 #nestinghousenext {
+    height: 100vh;
+    grid-area: next;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding-bottom: 15vh;
+    padding-left: 25vh;
+  }
+  #hscroll #stage4 #nestinghousenext h1 {
+    font-family: "IBM Plex Mono", sans-serif;
+    font-weight: 200;
+    font-size: 60px;
+    padding-right: 5%;
+  }
+  #hscroll #stage5 {
+    width: 180vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 10% 25% 5% 30% 5% auto;
+    grid-template-areas: "hero intro . details . map";
+  }
+  #hscroll #stage5 #weshero {
+    display: block;
+    grid-area: hero;
+  }
+  #hscroll #stage5 #weshero img {
+    height: 100vh;
+  }
+  #hscroll #stage5 #wesintro {
+    grid-area: intro;
+    padding-right: 5%;
+    padding-left: 23%;
+    padding-top: 20vh;
+  }
+  #hscroll #stage5 #wesdetails {
+    grid-area: details;
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+  }
+  #hscroll #stage5 #wesdetails img {
+    width: 100%;
+  }
+  #hscroll #stage5 #wesdetails h1 {
+    text-align: center;
+  }
+  #hscroll #stage5 #wesmap {
+    grid-area: map;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #hscroll #stage5 #wesmap img {
+    height: 90vh;
+    width: auto;
+  }
+  #hscroll #aboutsection {
+    position: relative;
+    display: flex;
+    width: 100vw;
+  }
+  #hscroll #aboutsection p {
+    margin-left: 13%;
+    margin-right: 49%;
+    margin-top: 15%;
+    font-family: "IBM Plex Mono", sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+  }
+  #hscroll #aboutsection img {
+    position: absolute;
+    margin-left: 35%;
+    margin-top: 5%;
+    width: 60%;
+  }
+  #hscroll #contactsection {
+    width: 100vw;
+  }
+  #hscroll #contactsection h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 200px;
+    font-weight: 100;
+    margin-bottom: 0%;
+    padding-left: 10%;
+    padding-top: 5%;
+  }
+  #hscroll #contactsection p {
+    font-family: "IBM Plex Mono", sans-serif;
+    font-size: 40px;
+    margin-bottom: 0%;
+    margin-top: 0%;
+    padding-left: 10%;
   }
 
   .proxy {
@@ -266,232 +960,5 @@ body {
     font-family: sans-serif;
     padding: 0;
     margin: 0;
-  }
-
-  #intro {
-    display: grid;
-    grid-template-columns: 30% 55% 15%;
-    grid-template-areas: ". intro .";
-    height: 100vh;
-    width: 50vw;
-  }
-  #intro #intro-div {
-    grid-area: intro;
-    padding-top: 28vh;
-  }
-  #intro #intro-div #intro-line-2 {
-    font-family: "IBM Plex Mono", sans-serif;
-    font-weight: 200;
-    font-size: 20px;
-  }
-  #intro #intro-div #intro-line-3 {
-    padding-top: 5%;
-    display: grid;
-    grid-template-columns: 72% 8% 20%;
-    grid-template-areas: "text . arrow";
-  }
-  #intro #intro-div #intro-line-3 #intro-line-3-text-div {
-    display: flex;
-    align-items: center;
-  }
-  #intro #intro-div #intro-line-3 #intro-line-3-text-div #intro-line-3-text {
-    font-family: "IBM Plex Mono", sans-serif;
-    font-weight: 400;
-    font-size: 25px;
-    grid-area: text;
-  }
-  #intro #intro-div #intro-line-3 #intro-arrow-div {
-    grid-area: arrow;
-    display: flex;
-    align-items: center;
-  }
-
-  #stage1 {
-    background: #FDFDFD;
-    width: 550vw;
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 2% 15% 27% 18% 15% 15% auto;
-    grid-template-areas: ". masthead intro inspiration process final next";
-  }
-  #stage1 #masthead-div {
-    grid-area: masthead;
-    padding-top: 18vh;
-  }
-  #stage1 #masthead-div #masthead-text-div {
-    display: grid;
-    grid-template-columns: 60% 40%;
-    grid-template-areas: ". text";
-    overflow: hidden;
-  }
-  #stage1 #masthead-div #masthead-text-div #masthead-text {
-    grid-area: text;
-    color: black;
-    font-family: "IBM Plex Mono", sans-serif;
-    font-size: 15px;
-    text-align: left;
-    font-weight: lighter;
-  }
-  #stage1 #masthead-div #masthead-text-div #masthead-text #net-art-span {
-    font-weight: bold;
-  }
-  #stage1 #net-intro-div {
-    grid-area: intro;
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  #stage1 #net-intro-div #net-intro-text {
-    width: 30%;
-    padding-left: 3%;
-    padding-right: 5%;
-    padding-top: 20vh;
-    color: black;
-    font-family: "IBM Plex Sans", sans-serif;
-    font-size: 16px;
-    text-align: left;
-    font-weight: lighter;
-  }
-  #stage1 #net-intro-div #net-intro-text h1 {
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 60px;
-    margin-bottom: 0%;
-  }
-  #stage1 #net-intro-div #net-intro-text h2 {
-    font-family: "IBM Plex Mono", sans-serif;
-    font-size: 25px;
-    font-weight: 200;
-    margin-bottom: 0%;
-    margin-top: 0%;
-  }
-  #stage1 #net-intro-div #net-hero {
-    background-image: url(../img/net-hero.png);
-    background-size: cover;
-    background-repeat: none;
-    width: 60%;
-  }
-  #stage1 #net-intro-div #net-circle {
-    position: absolute;
-    z-index: 3;
-    bottom: 0px;
-    height: 50vh;
-    margin-left: 26%;
-  }
-  #stage1 #net-inspiration-div {
-    grid-area: inspiration;
-    padding-left: 20%;
-    padding-right: 20%;
-    padding-top: 20vh;
-  }
-  #stage1 #net-inspiration-div h1 {
-    grid-area: title;
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 60px;
-    margin-bottom: 0%;
-    padding-bottom: 0%;
-  }
-  #stage1 #net-inspiration-div #net-inspiration-content-div {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-areas: "image text";
-    grid-gap: 5%;
-  }
-  #stage1 #net-inspiration-div #net-inspiration-content-div #net-inspiration-image {
-    width: 100%;
-    grid-area: image;
-  }
-  #stage1 #net-inspiration-div #net-inspiration-content-div #net-inspiration-text-div {
-    grid-area: text;
-  }
-  #stage1 #net-process-exploration-div {
-    grid-area: process;
-    display: grid;
-    grid-template-areas: "column1 column2";
-    grid-template-columns: 40% 60%;
-    padding-right: 20%;
-  }
-  #stage1 #net-process-exploration-div #net-process-exploration-column-1 {
-    grid-area: column1;
-    padding-top: 20vh;
-  }
-  #stage1 #net-process-exploration-div #net-process-exploration-column-1 h1 {
-    grid-area: title;
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 60px;
-    margin-bottom: 0%;
-    padding-bottom: 0%;
-  }
-  #stage1 #net-process-exploration-div #net-process-exploration-column-1 img {
-    max-width: 70%;
-  }
-  #stage1 #net-process-exploration-div #net-process-exploration-column-2 {
-    grid-area: column2;
-  }
-  #stage1 #net-process-exploration-div #net-process-exploration-column-2 #masthead-progress-img {
-    padding-top: 20%;
-    width: 100%;
-    margin-top: 2vh;
-  }
-  #stage1 #net-final-images-div {
-    grid-area: final;
-    padding-top: 10vh;
-    display: grid;
-    grid-template-columns: 80% 20%;
-    grid-template-areas: "img .";
-  }
-  #stage1 #net-final-images-div #net-final-images-grid-div {
-    grid-area: img;
-  }
-  #stage1 #net-final-images-div #net-final-images-grid-div h1 {
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 40px;
-    margin-bottom: 0%;
-    padding-bottom: 0%;
-    text-align: center;
-  }
-  #stage1 #net-final-images-div #net-final-images-grid-div img {
-    width: 100%;
-  }
-  #stage1 #net-next-project-div {
-    grid-area: next;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    padding-bottom: 15vh;
-  }
-  #stage1 #net-next-project-div h1 {
-    font-family: "IBM Plex Mono", sans-serif;
-    font-weight: 200;
-    font-size: 60px;
-    margin-bottom: 0%;
-    padding-right: 5%;
-  }
-
-  #stage2 {
-    background: #FDFDFD;
-    width: 100vw;
-    height: 100vh;
-  }
-
-  #stage3 {
-    background: #833ab4;
-    background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
-    width: 100vw;
-    height: 100vh;
-  }
-
-  #stage4 {
-    background: #009FFF;
-    background: linear-gradient(to right, #009FFF, #ec2F4B);
-    width: 100vw;
-    height: 100vh;
-  }
-
-  #stage5 {
-    background: #8A2387;
-    background: linear-gradient(to right, #8A2387, #E94057, #F27121);
-    width: 100vw;
-    height: 100vh;
   }
 }

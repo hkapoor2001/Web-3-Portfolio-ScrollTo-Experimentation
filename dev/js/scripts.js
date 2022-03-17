@@ -6,6 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { burgerTL } from "./burgerAnimation.js";
 import { arrowBounce } from "./arrowbouncingAnimation";
+import { appelfarmlogoAnimation } from "./appelfarmlogoAnimation";
 
 // --------Imports end here--------
 
@@ -127,6 +128,29 @@ link5.addEventListener('click', function() {
     })
     menuTL.reverse();
     CanISeeMenu = false
+})
+
+
+var aboutsection= document.querySelector("#aboutsection")
+var aboutbutton= document.querySelector("#about-button")
+
+aboutbutton.addEventListener('click', function() {
+    gsap.to(window, {
+      scrollTo: ( (aboutsection.offsetLeft) * ( scrollContainer.offsetWidth / (scrollContainer.offsetWidth - window.innerWidth))),
+      duration: .5,
+      invalidateOnRefresh: true
+    })
+})
+
+var contactsection= document.querySelector("#contactsection")
+var contactbutton= document.querySelector("#contact-button")
+
+contactbutton.addEventListener('click', function() {
+    gsap.to(window, {
+      scrollTo: ( (contactsection.offsetLeft) * ( scrollContainer.offsetWidth / (scrollContainer.offsetWidth - window.innerWidth))),
+      duration: .5,
+      invalidateOnRefresh: true
+    })
 })
 
 // code for scrollto ends here
@@ -279,3 +303,72 @@ window.addEventListener("load", MobileMenu )
 
 
 // experimenting with scrolltrigger animations 
+
+// appelfarmlogoAnimation();
+
+
+gsap.set("#abouticon", {alpha:0})
+
+const aboutbuttonTL = new gsap.timeline({paused:true});
+
+const aboutrolloverAnimation = new gsap.timeline();
+
+
+aboutrolloverAnimation.to("#abouticon", {duration:.1, alpha:1})
+
+
+aboutbuttonTL.add(aboutrolloverAnimation)
+
+var about= document.querySelector("#about-button")
+about.addEventListener("mouseenter", AboutButtonRolloverEnter)
+about.addEventListener("mouseleave", AboutButtonRolloverLeave)
+
+let IsAboutButtonRolloverActive = false;
+function AboutButtonRolloverEnter(){
+    if(IsAboutButtonRolloverActive === false){
+        aboutbuttonTL.play();
+        IsAboutButtonRolloverActive = true;
+    }
+}
+
+function AboutButtonRolloverLeave(){
+    if(IsAboutButtonRolloverActive === true){
+        aboutbuttonTL.reverse();
+        IsAboutButtonRolloverActive = false;
+    }
+}
+
+
+
+const contactbuttonTL = new gsap.timeline({paused:true});
+
+const envelope = new gsap.timeline();
+const flap = new gsap.timeline();
+
+
+envelope.to("#envelope", {duration:.1, fill:"#FFFFFF"})
+flap.to("#flap", {duration:.1, stroke:"#000000"})
+
+
+contactbuttonTL.add(envelope)
+contactbuttonTL.add(flap)
+
+
+var contact= document.querySelector("#contact-button")
+contact.addEventListener("mouseenter", ContactButtonRolloverEnter)
+contact.addEventListener("mouseleave", ContactButtonRolloverLeave)
+
+let IsContactButtonRolloverActive = false;
+function ContactButtonRolloverEnter(){
+    if(IsContactButtonRolloverActive === false){
+        contactbuttonTL.play();
+        IsContactButtonRolloverActive = true;
+    }
+}
+
+function ContactButtonRolloverLeave(){
+    if(IsContactButtonRolloverActive === true){
+        contactbuttonTL.reverse();
+        IsContactButtonRolloverActive = false;
+    }
+}
